@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0910">
+  <meta name="description" content="Chapter 21 — a cinematic birthday experience.">
+  <title>Chapter 21 — Happy Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader" class="intro-screen">
+    <div class="intro-particles" aria-hidden="true"></div>
+    <div class="intro-glow"></div>
+    <div class="intro-copy">
+      <p id="introLine1" class="eyebrow"></p>
+      <p id="introLine2" class="intro-sub"></p>
+      <div class="intro-age">21</div>
+      <p class="intro-name">Happy Birthday, <span data-her-name>HER NAME</span></p>
+      <button id="enterBtn" class="gold-btn" type="button">ENTER <span>→</span></button>
+    </div>
+  </div>
+
+  <div class="site-shell">
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <canvas id="ambientCanvas" aria-hidden="true"></canvas>
+    <div class="film-grain" aria-hidden="true"></div>
+<main>
+      <section class="hero section-dark" id="hero">
+        <div class="light-leak leak-one"></div>
+        <div class="light-leak leak-two"></div>
+        <div class="hero-inner">
+          <p class="eyebrow reveal">A NEW CHAPTER BEGINS</p>
+          <h1 class="hero-number" data-parallax="0.08">21</h1>
+          <div class="hero-rule"></div>
+          <p class="hero-title reveal">Twenty-one looks beautiful on you.</p>
+          <p class="hero-sub reveal">Welcome to your next chapter.</p>
+          <span class="scroll-cue">SCROLL TO BEGIN <b>↓</b></span>
+        </div>
+      </section>
+
+      <section class="chapter section-ivory">
+        <div class="section-inner narrow">
+          <p class="eyebrow reveal">CHAPTER I</p>
+          <h2 class="display reveal">This chapter is yours.</h2>
+          <div class="chapter-copy stagger-lines">
+            <p>You've made it through 20 chapters already.</p>
+            <p>Some were beautiful.<br>Some were difficult.<br>Some changed you.</p>
+            <p>And now there's a brand-new chapter waiting.</p>
+            <p>One filled with new places,<br>new memories,<br>new dreams,<br>and moments you haven't even imagined yet.</p>
+          </div>
+          <div class="gold-line"></div>
+        </div>
+      </section>
+
+      <section class="wishes section-ivory">
+        <div class="section-inner">
+          <p class="eyebrow reveal">CHAPTER II</p>
+          <h2 class="display reveal">21 little wishes.</h2>
+          <p class="section-lead reveal">One for every year that brought you here.</p>
+          <div id="wishGrid" class="wish-grid"></div>
+          <p class="closing-note reveal">And these are only the first 21 wishes.</p>
+        </div>
+      </section>
+
+      <section class="reminder section-dark">
+        <div class="section-inner reminder-inner">
+          <p class="eyebrow">A LITTLE REMINDER</p>
+          <div class="reminder-sequence">
+            <p>In case you ever forget…</p>
+            <p class="huge">You are enough.</p>
+            <p class="huge">You are loved.</p>
+            <p class="huge">You are becoming someone incredible.</p>
+            <p class="huge">And you have so much life left to live.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="constellation section-night" id="constellationSection">
+        <canvas id="constellationCanvas" aria-hidden="true"></canvas>
+        <div class="section-inner constellation-inner">
+          <p class="eyebrow reveal">CHAPTER III</p>
+          <div class="constellation-symbol" id="constellationSymbol">21</div>
+          <p class="constellation-copy reveal">Some people are stars.<br><em>You are an entire constellation.</em></p>
+        </div>
+      </section>
+
+      <section class="remember section-ivory">
+        <div class="section-inner narrow">
+          <p class="eyebrow reveal">CHAPTER IV</p>
+          <h2 class="display reveal">21 things to remember at 21.</h2>
+          <div id="rememberList" class="remember-list"></div>
+        </div>
+      </section>
+
+      <section class="letter-section section-dark">
+        <div class="section-inner">
+          <p class="eyebrow reveal">CHAPTER V</p>
+          <h2 class="display reveal">A birthday letter.</h2>
+          <p class="section-lead reveal">Something to keep for the days you need it.</p>
+
+          <button id="envelope" class="envelope-wrap" type="button" aria-label="Open birthday letter">
+            <div class="envelope">
+              <div class="envelope-back"></div>
+              <div class="letter-paper">
+                <p class="script-small">A note for you</p>
+                <h3>Open this<br>when you're ready.</h3>
+              </div>
+              <div class="envelope-flap"></div>
+              <div class="envelope-front"></div>
+              <div class="wax">21</div>
+            </div>
+          </button>
+
+          <div id="letter" class="letter-overlay" aria-hidden="true">
+            <div class="letter-card">
+              <button id="closeLetter" class="close-letter" type="button" aria-label="Close letter">×</button>
+              <div class="paper-texture"></div>
+              <p class="script-small">For the birthday girl</p>
+              <h3>Dear <span data-her-name>HER NAME</span>,</h3>
+              <div id="personalLetter" class="letter-body"></div>
+              <p class="letter-signoff">With love,<br><span data-your-name>YOUR NAME</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cake-section section-ivory">
+        <div class="section-inner cake-inner">
+          <p class="eyebrow reveal">CHAPTER VI</p>
+          <h2 class="display reveal">Make a wish.</h2>
+          <div class="cake-stage">
+            <div class="cake-glow"></div>
+            <div id="cake" class="cake" aria-label="Birthday cake with 21 candles">
+              <div class="candles" id="candles"></div>
+              <div class="cake-top"></div>
+              <div class="cake-layer layer-one"></div>
+              <div class="cake-layer layer-two"></div>
+              <div class="cake-layer layer-three"></div>
+              <div class="cake-plate"></div>
+            </div>
+          </div>
+          <div class="wish-prompt">
+            <p id="wishPromptOne">21 candles.</p>
+            <p id="wishPromptTwo">One wish.</p>
+            <p id="wishPromptThree">Make it count.</p>
+          </div>
+          <button id="wishBtn" class="gold-btn dark-text" type="button">MAKE A WISH ✨</button>
+        </div>
+      </section>
+
+      <section id="celebration" class="celebration section-dark">
+        <canvas id="celebrationCanvas" aria-hidden="true"></canvas>
+        <div class="section-inner celebration-inner">
+          <div class="celebration-number">21</div>
+          <p class="eyebrow">THE NEXT CHAPTER</p>
+          <h2 class="celebration-title">Happy 21st Birthday,<br><span data-her-name>HER NAME</span></h2>
+          <p class="celebration-line first">May this be the year you surprise yourself.</p>
+          <p class="celebration-line second">May your 21st chapter be your favorite one yet.</p>
+          <div class="sparkle">✦</div>
+          <p class="celebration-final">Here's to 21.</p>
+        </div>
+      </section>
+
+      <section class="finale section-night">
+        <div class="final-stars"></div>
+        <div class="section-inner finale-inner">
+          <p class="finale-main">The best chapters<br>haven't been written yet.</p>
+          <p class="finale-goodnight">Goodnight, birthday girl.</p>
+          <div class="infinity">∞</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
